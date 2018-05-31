@@ -17,6 +17,7 @@ import TimerMixin from 'react-timer-mixin';
 // Default assets
 
 import {
+  BackIcon,
   PlayIcon,
   PauseIcon,
   Spinner,
@@ -122,6 +123,8 @@ export default class VideoPlayer extends React.Component {
     switchToPortrait: PropTypes.func,
 
     showControlsOnLoad: PropTypes.bool,
+    title: PropTypes.string,
+    backButtonCallback: PropTypes.func,
   };
 
   static defaultProps = {
@@ -161,6 +164,8 @@ export default class VideoPlayer extends React.Component {
       );
     },
     showControlsOnLoad: false,
+    text: "",
+    backButtonCallback: () => true,
   };
 
   constructor(props) {
@@ -626,6 +631,48 @@ export default class VideoPlayer extends React.Component {
           style={{
             backgroundColor: 'black',
           }}>
+
+          {/* Top bar */}
+          <Animated.View
+            pointerEvents={
+              this.state.controlsState === CONTROL_STATES.HIDDEN
+                ? "none"
+                : "auto"
+            }
+            style={{
+              position: "absolute",
+              top: 5,
+              width: videoWidth,
+              opacity: this.state.controlsOpacity,
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              zIndex: 1
+            }}
+          >
+            {/* Back button */}
+            <Control
+              style={{ backgroundColor: "transparent" }}
+              center={false}
+              callback={this.props.backButtonCallback}
+            >
+              <BackIcon />
+            </Control>
+            {/* Video title */}
+            <Text
+              style={[
+                this.props.textStyle,
+                {
+                  backgroundColor: "transparent",
+                  marginLeft: 5,
+                  fontSize: 20
+                }
+              ]}
+            >
+              {this.props.title}
+            </Text>
+          </Animated.View>
+
           <Video
             source={source}
             ref={component => {

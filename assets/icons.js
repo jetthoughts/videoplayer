@@ -5,6 +5,16 @@ import { Foundation, MaterialIcons } from '@expo/vector-icons';
 const ICON_COLOR = '#FFFFFF';
 const CENTER_ICON_SIZE = 36;
 const BOTTOM_BAR_ICON_SIZE = 30;
+const TOP_BAR_ICON_SIZE = 30;
+
+export const BackIcon = () => (
+  <MaterialIcons
+    name={"arrow-back"}
+    size={TOP_BAR_ICON_SIZE}
+    color={ICON_COLOR}
+    style={{ textAlign: "center" }}
+  />
+);
 
 export const PlayIcon = () =>
   <Foundation

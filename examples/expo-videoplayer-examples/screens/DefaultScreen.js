@@ -56,6 +56,7 @@ export default class DefaultScreen extends BaseScreen {
             switchToLandscape={this.switchToLandscape.bind(this)}
             switchToPortrait={this.switchToPortrait.bind(this)}
             playFromPositionMillis={0}
+            title={'Motion Picture'}
           />
 
           <View
