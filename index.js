@@ -641,7 +641,8 @@ export default class VideoPlayer extends React.Component {
             }
             style={{
               position: "absolute",
-              top: 5,
+              top: 20,
+              left: 5,
               width: videoWidth,
               opacity: this.state.controlsOpacity,
               flexDirection: "row",
