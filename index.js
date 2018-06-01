@@ -643,7 +643,7 @@ export default class VideoPlayer extends React.Component {
               position: "absolute",
               top: 20,
               left: 5,
-              width: videoWidth,
+              right: 50,
               opacity: this.state.controlsOpacity,
               flexDirection: "row",
               alignItems: "center",
@@ -666,9 +666,10 @@ export default class VideoPlayer extends React.Component {
                 {
                   backgroundColor: "transparent",
                   marginLeft: 5,
-                  fontSize: 20
+                  fontSize: 20,
                 }
               ]}
+              numberOfLines={1}
             >
               {this.props.title}
             </Text>
