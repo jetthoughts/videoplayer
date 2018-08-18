@@ -1,6 +1,6 @@
 {
   "name": "@expo/videoplayer",
-  "version": "0.4.0",
+  "version": "0.4.0.jt.2",
   "description": "Customizable videoplayer controls for expo",
   "author": "Abi Raja <abimanyuraja@gmail.com>",
   "main": "index.js",
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "react-mixin": "^3.1.1",
+    "react-mixin": "^4.0.0",
     "react-timer-mixin": "^0.13.3"
   },
   "devDependencies": {
@@ -31,8 +31,8 @@
     "eslint-plugin-babel": "^4.1.1",
     "eslint-plugin-flowtype": "^2.41.0",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-prettier": "^2.1.1",
+    "eslint-plugin-react": "^7.5.1",
     "prettier": "^1.9.2",
     "react-docgen-markdown-renderer": "^1.0.1"
   },
